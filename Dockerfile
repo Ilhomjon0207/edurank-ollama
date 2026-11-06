@@ -13,4 +13,4 @@ ENV OLLAMA_HOST=127.0.0.1:11434
 
 EXPOSE 10000
 
-CMD ["/start.sh"]
+ENTRYPOINT ["/bin/sh", "/start.sh"]
