@@ -1,5 +1,6 @@
-FROM ollama/ollama
+FROM ollama/ollama:latest
 
-EXPOSE 11434
+EXPOSE 10000
 
-CMD ["serve"]
+ENTRYPOINT ["/bin/sh", "-c"]
+CMD ["ollama serve & sleep 5 && ollama pull qwen2.5:3b && wait"]
